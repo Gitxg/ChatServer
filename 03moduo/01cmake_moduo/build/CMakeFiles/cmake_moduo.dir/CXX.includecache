@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/cmake_moduo.cpp
+muduo/net/TcpServer.h
+-
+muduo/base/Logging.h
+-
+muduo/net/EventLoop.h
+-
+iostream
+-
+string
+-
+functional
+-
+
