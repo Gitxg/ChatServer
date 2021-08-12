@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        { //编译的配置如下
+            "name": "Linux",
+            // 添加头文件的搜索路径
+            // 默认包含头文件的搜索路径是
+            // (1) /usr/include
+            // (2) /usr/local/include
+            "includePath": [
+                //自定义的路径加上
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            //编译器的路径
+            "compilerPath": "/usr/bin/gcc",
+            //支持C的11的标准语法
+            "cStandard": "c11",
+            //支持C++的11的标准语法
+            "cppStandard": "c++11",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
+// gcc  -I头文件的搜索路径    默认头文件的搜索路径 (1) /usr/include (2) /usr/local/include
+//      -L库文件的搜索路径    默认的库文件搜索路径 (1) /usr/lib     (2) /usr/local/lib
+//      -l库的名称

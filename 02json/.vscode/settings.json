@@ -1,0 +1,54 @@
+{
+    "explorer.confirmDelete": false,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.default.enableConfigurationSquiggles": false,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -std=c++11 $fileName -o out && $dir/out",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    "code-runner.languageIdToFileExtensionMap": {
+        "bat": ".bat",
+        "powershell": ".ps1",
+        "typescript": ".ts"
+    },
+    //全局配置
+    "workbench.colorTheme": "Default Dark+", // 主题
+    "workbench.activityBar.visible": true, // 左侧工具栏是否可见
+    "breadcrumbs.enabled": false, // 开启 vscode 文件路径导航
+    "files.trimTrailingWhitespace": true, // 删除行尾空格
+    "files.defaultLanguage": "cpp", // ctrl+N新建文件后默认的语言
+    "editor.tabSize": 4, // tab 大小为 4 个空格
+    "editor.wordWrap": "off", // 编辑器自动换行
+    "editor.formatOnSave": true, // 保存的时候自动格式化
+    "editor.formatOnType": true, // 输入时就进行格式化，默认触发字符较少，分号可以触发
+    "editor.snippetSuggestions": "top",
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "code-runner.runInTerminal": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "C_Cpp.files.exclude": {
+        "**/.vscode": true
+    },
+    "workbench.editorAssociations": {
+        "*.json": "default"
+    },
+    "C_Cpp.commentContinuationPatterns": [
+        "/**"
+    ],
+    "workbench.editor.enablePreview": true,
+    "notebook.showFoldingControls": "always",
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false
+    },
+    "editor.minimap.scale": 3,
+    "editor.minimap.maxColumn": 60,
+    "diffEditor.wordWrap": "on",
+    "indenticator.inner.showHover": true,
+    "indenticator.showHover": true,
+    "files.associations": {
+        "string": "cpp"
+    },
+}

@@ -1,0 +1,23 @@
+sudo apt-get install libboost-dev
+
+安装后可在/usr/include中查看到boost目录。
+
+
+安装 redis
+sudo apt install redis-server
+
+（1）启动 redis
+redis-server 
+
+（2）启动 mysql
+mysql -u root -p 
+
+
+
+安装mysql
+https://www.cnblogs.com/zhuyp1015/p/3561470.html
+
+
+
+查看当前网络窗口信息
+netstat -tanp
