@@ -1,0 +1,53 @@
+cd /usr/local/nginx/sbin
+sudo ./nginx -s reload
+不中断用户服务的情况下，使得新更改的配置文件生效
+
+sudo ./nginx -s stop
+立即关闭
+sudo ./nginx -s quit
+正常关闭
+
+
+gcc main.c -o main
+编译main.c文件并生成 main 的可执行文件
+
+ps -ef | grep bash
+查找包含 bash字样的进程
+
+pts/0 代表1号虚拟终端
+whereis bash 查找bash所在的位置
+
+ps -la 参数a表示显示终端上的所有进程
+man ps  帮助手册
+PID  代表进程的ID
+PPID 代表父进程的ID
+
+附在终端进程17757上面
+sudo strace -e trace=signal -p 17757  
+sudo strace -e trace=signal -p 16012  
+
+
+
+sudo find / -name "signal.h" | xargs grep -in "SIGHUP"
+sudo find / -name "signal.h"
+表示在根目录下寻找一个名字为signal.h的文件
+-name根据文件名字来查找
+grep文本搜索工具
+xargs表示向后传送命令
+-i 代表忽略大小写
+-n 显示要查找的行号
+SIGHUP 查找的文本
+
+
+进程间通信方式
+SIGHUP  挂断信号
+SIGTERM 终止信号
+
+
+
+
+
+
+
+
+
