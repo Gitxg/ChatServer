@@ -1,9 +1,8 @@
-{
+{ //当前工作区的一些设置，工作区的设置会覆盖掉用户区的设置
     "explorer.confirmDelete": false,
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.default.enableConfigurationSquiggles": false,
     "code-runner.executorMap": {
-        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         //按下 右键然后点击运行时的命令
         "cpp": "cd $dir && g++ -std=c++11 $fileName -lmuduo_net -lmuduo_base -lpthread -o out && $dir/out",
     },
@@ -37,18 +36,6 @@
     ],
     "workbench.editor.enablePreview": true,
     "notebook.showFoldingControls": "always",
-    "[markdown]": {
-        "editor.wordWrap": "on",
-        "editor.quickSuggestions": false
-    },
-    "editor.minimap.scale": 3,
-    "editor.minimap.maxColumn": 60,
-    "diffEditor.wordWrap": "on",
-    "indenticator.inner.showHover": true,
-    "indenticator.showHover": true,
-    "files.associations": {
-        "string": "cpp",
-        "iostream": "cpp",
-        "functional": "cpp"
-    },
+    //cmake的路径在哪里
+    "cmake.cmakePath": " /usr/bin/cmake"
 }

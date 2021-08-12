@@ -6,25 +6,25 @@
 // 使用muduo开发回显服务器
 class EchoServer
 {
- public:
-  EchoServer(muduo::net::EventLoop* loop,
-             const muduo::net::InetAddress& listenAddr);
+public:
+  EchoServer(muduo::net::EventLoop *loop,
+             const muduo::net::InetAddress &listenAddr);
 
-  void start(); 
+  void start();
 
- private:
-  void onConnection(const muduo::net::TcpConnectionPtr& conn);
+private:
+  void onConnection(const muduo::net::TcpConnectionPtr &conn);
 
-  void onMessage(const muduo::net::TcpConnectionPtr& conn,
-                 muduo::net::Buffer* buf,
+  void onMessage(const muduo::net::TcpConnectionPtr &conn,
+                 muduo::net::Buffer *buf,
                  muduo::Timestamp time);
 
   muduo::net::TcpServer server_;
 };
 
-EchoServer::EchoServer(muduo::net::EventLoop* loop,
-                       const muduo::net::InetAddress& listenAddr)
-  : server_(loop, listenAddr, "EchoServer")
+EchoServer::EchoServer(muduo::net::EventLoop *loop,
+                       const muduo::net::InetAddress &listenAddr)
+    : server_(loop, listenAddr, "EchoServer")
 {
   server_.setConnectionCallback(
       boost::bind(&EchoServer::onConnection, this, _1));
@@ -37,15 +37,15 @@ void EchoServer::start()
   server_.start();
 }
 
-void EchoServer::onConnection(const muduo::net::TcpConnectionPtr& conn)
+void EchoServer::onConnection(const muduo::net::TcpConnectionPtr &conn)
 {
   LOG_INFO << "EchoServer - " << conn->peerAddress().toIpPort() << " -> "
            << conn->localAddress().toIpPort() << " is "
            << (conn->connected() ? "UP" : "DOWN");
 }
 
-void EchoServer::onMessage(const muduo::net::TcpConnectionPtr& conn,
-                           muduo::net::Buffer* buf,
+void EchoServer::onMessage(const muduo::net::TcpConnectionPtr &conn,
+                           muduo::net::Buffer *buf,
                            muduo::Timestamp time)
 {
   // 接收到所有的消息，然后回显
@@ -54,7 +54,6 @@ void EchoServer::onMessage(const muduo::net::TcpConnectionPtr& conn,
            << "data received at " << time.toString();
   conn->send(msg);
 }
-
 
 int main()
 {
@@ -65,4 +64,3 @@ int main()
   server.start();
   loop.loop();
 }
-
