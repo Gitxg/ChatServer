@@ -37,5 +37,12 @@
     "workbench.editor.enablePreview": true,
     "notebook.showFoldingControls": "always",
     //cmake的路径在哪里
-    "cmake.cmakePath": "/usr/bin/cmake"
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "files.associations": {
+        "functional": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "valarray": "cpp",
+        "tuple": "cpp"
+    }
 }
