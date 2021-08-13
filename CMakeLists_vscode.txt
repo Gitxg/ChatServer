@@ -1,0 +1,8 @@
+# CMake 最低版本号要求: 指定运行此配置文件所需的 CMake 的最低版本
+cmake_minimum_required (VERSION 2.8)
+
+# 项目信息: 该命令表示项目的名称是 main
+project (main)
+
+#在VScode里面 分层编译环境 添加对应的文件夹即可
+add_subdirectory(03moduo/02cmake)

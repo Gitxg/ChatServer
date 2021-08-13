@@ -57,38 +57,38 @@ include CMakeFiles/cmake_moduo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cmake_moduo.dir/flags.make
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o: CMakeFiles/cmake_moduo.dir/flags.make
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o: ../cmake_moduo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o -c /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/cmake_moduo.cpp
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o: CMakeFiles/cmake_moduo.dir/flags.make
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o: ../src/cmake_moduo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o -c /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/cmake_moduo.cpp > CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.i
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp > CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.i
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/cmake_moduo.cpp -o CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.s
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp -o CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.s
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.requires:
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.requires:
 
-.PHONY : CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.requires
+.PHONY : CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.requires
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.provides: CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.provides.build
-.PHONY : CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.provides
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.provides: CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.provides.build
+.PHONY : CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.provides
 
-CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.provides.build: CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o
+CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.provides.build: CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o
 
 
 # Object files for target cmake_moduo
 cmake_moduo_OBJECTS = \
-"CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o"
+"CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o"
 
 # External object files for target cmake_moduo
 cmake_moduo_EXTERNAL_OBJECTS =
 
-../bin/cmake_moduo: CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o
+../bin/cmake_moduo: CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o
 ../bin/cmake_moduo: CMakeFiles/cmake_moduo.dir/build.make
 ../bin/cmake_moduo: CMakeFiles/cmake_moduo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/cmake_moduo"
@@ -99,7 +99,7 @@ CMakeFiles/cmake_moduo.dir/build: ../bin/cmake_moduo
 
 .PHONY : CMakeFiles/cmake_moduo.dir/build
 
-CMakeFiles/cmake_moduo.dir/requires: CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o.requires
+CMakeFiles/cmake_moduo.dir/requires: CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o.requires
 
 .PHONY : CMakeFiles/cmake_moduo.dir/requires
 

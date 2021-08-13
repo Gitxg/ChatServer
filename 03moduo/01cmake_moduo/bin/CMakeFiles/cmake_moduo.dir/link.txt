@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o  -o cmake_moduo -rdynamic -lmuduo_net -lmuduo_base -lpthread 

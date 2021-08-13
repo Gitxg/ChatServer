@@ -123,32 +123,32 @@ cmake_moduo/fast:
 	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/build
 .PHONY : cmake_moduo/fast
 
-cmake_moduo.o: cmake_moduo.cpp.o
+src/cmake_moduo.o: src/cmake_moduo.cpp.o
 
-.PHONY : cmake_moduo.o
+.PHONY : src/cmake_moduo.o
 
 # target to build an object file
-cmake_moduo.cpp.o:
-	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.o
-.PHONY : cmake_moduo.cpp.o
+src/cmake_moduo.cpp.o:
+	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o
+.PHONY : src/cmake_moduo.cpp.o
 
-cmake_moduo.i: cmake_moduo.cpp.i
+src/cmake_moduo.i: src/cmake_moduo.cpp.i
 
-.PHONY : cmake_moduo.i
+.PHONY : src/cmake_moduo.i
 
 # target to preprocess a source file
-cmake_moduo.cpp.i:
-	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.i
-.PHONY : cmake_moduo.cpp.i
+src/cmake_moduo.cpp.i:
+	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.i
+.PHONY : src/cmake_moduo.cpp.i
 
-cmake_moduo.s: cmake_moduo.cpp.s
+src/cmake_moduo.s: src/cmake_moduo.cpp.s
 
-.PHONY : cmake_moduo.s
+.PHONY : src/cmake_moduo.s
 
 # target to generate assembly for a file
-cmake_moduo.cpp.s:
-	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/cmake_moduo.cpp.s
-.PHONY : cmake_moduo.cpp.s
+src/cmake_moduo.cpp.s:
+	$(MAKE) -f CMakeFiles/cmake_moduo.dir/build.make CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.s
+.PHONY : src/cmake_moduo.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cmake_moduo"
-	@echo "... cmake_moduo.o"
-	@echo "... cmake_moduo.i"
-	@echo "... cmake_moduo.s"
+	@echo "... src/cmake_moduo.o"
+	@echo "... src/cmake_moduo.i"
+	@echo "... src/cmake_moduo.s"
 .PHONY : help
 
 

@@ -1,8 +1,4 @@
-# CMake 最低版本号要求: 指定运行此配置文件所需的 CMake 的最低版本
-cmake_minimum_required (VERSION 2.8)
 
-# 项目信息: 该命令表示项目的名称是 main
-project (main)
 #       (1)  (2)                (3)          (4)            (5)        (6)
 #g++ -o main -g -std=c++11 main.cpp xxx.cpp -I/usr/include -L/usr/lib -Imuduo_net -Imuduo_base -Ipthread
 
@@ -19,9 +15,6 @@ set(CMAKE_CXX_STANDARD 11)
 # (3') 设定src目录下的所有源文件 保存到 SRC_LIST 变量
 # 把指定路径下的所有源文件名字放到变量名SRC_LIST中 .代表当前路径下的文件 src代表src文件夹下的文件
 aux_source_directory(src SRC_LIST)
-
-# (3')设置需要编译的源文件列表
-set(SRC_LIST1 cmake_moduo.cpp)
 
 # (3)指定源文件 和 生成可执行目标的名字
 # 将名为 cmake_moduo.cpp test.cpp 的源文件编译成一个名称为 cmake_moduo 的可执行文件
