@@ -1,0 +1,15 @@
+1.  下载对应的线刷包 http://husky.pt.miui.com/buildFile/flashPackage
+选择对应机型: lisa_in_global
+表示印度谷歌版本
+
+2. 解压下载后的线刷包，将手机连接到电脑，运行指令
+adb reboot bootloader 使手机进入fastboot模式。
+
+3. 查看手机是否连接成功，运行指令 sudo fastboot devices。
+
+4. 对解压后文件夹下的flash文件增加权限。
+   chmod a+x flash_all.sh
+
+5. 开始进行刷机操作。
+   sudo ./flash_all.sh
+
