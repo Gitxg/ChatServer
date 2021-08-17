@@ -37,14 +37,77 @@ MsgHandler ChatWork::getHandldr(int msgid)
     }
 }
 
-//处理登录业务
+// ORM框架 对象关系映射(Object Relational Mapping)
+// 业务模块和数据模块拆分开
+
+// 处理登录业务
+// {"msgid":1,"name":"xiao ai","password":"123456"}
 void ChatWork::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    LOG_INFO << "处理登录业务";
+    LOG_INFO << "开始处理登录业务";
+    //int id = js["id"];
+    string name = js["name"];
+    string password = js["password"];
+
+    //select count(*) from user where password = "123456" AND name="pi pi";
+    User usercin;
+    usercin.setName(name);
+    usercin.setPassword(password);
+
+    //通过
+    if (this->_usermodel.logselect(usercin))
+    {
+        LOG_INFO << "登录成功";
+        json response;
+        response["msgid"] = LOGIN_MSG_ACK;
+        //表示登录响应成功
+        response["reeno"] = 0;
+        conn->send(response.dump());
+    }
+    else
+    {
+        LOG_INFO << "登录失败";
+        json response;
+        response["msgid"] = LOGIN_MSG_ACK;
+        //表示响应成功
+        response["reeno"] = 1;
+        conn->send(response.dump());
+    }
 }
 
-//处理注册业务
+// 处理注册业务
 void ChatWork::reg(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
-    LOG_INFO << "处理注册业务";
+    // 接收到的 js 信息为：
+    // {"msgid":2,"name":"xiao ai","password":"123456"}
+    LOG_INFO << "开始处理注册业务";
+
+    string jsname = js["name"];
+    string jspwd = js["password"];
+
+    User usercin;
+    usercin.setName(jsname);
+    usercin.setPassword(jspwd);
+
+    //通过
+    if (this->_usermodel.insert(usercin))
+    {
+        LOG_INFO << "注册成功";
+        json response;
+        response["msgid"] = REG_MSG_ACK;
+        //表示响应成功
+        response["reeno"] = 0;
+        response["id"] = usercin.getId();
+        conn->send(response.dump());
+    }
+
+    else
+    {
+        LOG_INFO << "注册失败";
+        json response;
+        response["msgid"] = REG_MSG_ACK;
+        //表示响应失败
+        response["reeno"] = 1;
+        conn->send(response.dump());
+    }
 }

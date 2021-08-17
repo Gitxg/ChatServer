@@ -14,6 +14,8 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 Include_directories(${PROJECT_SOURCE_DIR}/include)
 Include_directories(${PROJECT_SOURCE_DIR}/thridparty)
 Include_directories(${PROJECT_SOURCE_DIR}/include/server)
+Include_directories(${PROJECT_SOURCE_DIR}/include/server/db)
+
 
 # (5) 添加库文件的搜索路径，相当于makefile里面的-I
 link_directories(${PROJECT_SOURCE_DIR}/lib)

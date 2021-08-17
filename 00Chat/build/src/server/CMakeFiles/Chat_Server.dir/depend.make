@@ -3,13 +3,25 @@
 
 src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../include/server/chatserver.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../include/server/chatwork.hpp
+src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../include/server/db/user.hpp
+src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../include/server/db/usermodel.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../thridparty/json.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o: ../src/server/chatserver.cpp
 
 src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../include/public.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../include/server/chatwork.hpp
+src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../include/server/db/user.hpp
+src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../include/server/db/usermodel.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../thridparty/json.hpp
 src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o: ../src/server/chatwork.cpp
+
+src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o: ../include/server/db/db.hpp
+src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o: ../src/server/db/db.cpp
+
+src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o: ../include/server/db/db.hpp
+src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o: ../include/server/db/user.hpp
+src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o: ../include/server/db/usermodel.hpp
+src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o: ../src/server/db/usermodel.cpp
 
 src/server/CMakeFiles/Chat_Server.dir/main.cpp.o: ../include/server/chatserver.hpp
 src/server/CMakeFiles/Chat_Server.dir/main.cpp.o: ../src/server/main.cpp

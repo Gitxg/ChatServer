@@ -23,6 +23,22 @@ functional
 -
 json.hpp
 ../include/server/json.hpp
+usermodel.hpp
+../include/server/usermodel.hpp
+
+../include/server/db/db.hpp
+mysql/mysql.h
+-
+string
+-
+
+../include/server/db/user.hpp
+string
+-
+
+../include/server/db/usermodel.hpp
+user.hpp
+../include/server/db/user.hpp
 
 ../thridparty/json.hpp
 algorithm
@@ -374,6 +390,20 @@ chatwork.hpp
 public.hpp
 /home/zxg/mycode/github/ChatServer/00Chat/src/server/public.hpp
 muduo/base/Logging.h
+-
+
+/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.cpp
+db.hpp
+/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
+muduo/base/Logging.h
+-
+
+/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp
+usermodel.hpp
+/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.hpp
+db.hpp
+/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
+iostream
 -
 
 /home/zxg/mycode/github/ChatServer/00Chat/src/server/main.cpp

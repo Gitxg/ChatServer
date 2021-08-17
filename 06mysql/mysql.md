@@ -35,7 +35,7 @@ use example；
 source chat.sql
 
 # 显示所有的数据库
-show databases
+show databases;
 
 
 # 切换数据库：

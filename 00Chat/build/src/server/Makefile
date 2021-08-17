@@ -179,6 +179,60 @@ chatwork.cpp.s:
 	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.s
 .PHONY : chatwork.cpp.s
 
+db/db.o: db/db.cpp.o
+
+.PHONY : db/db.o
+
+# target to build an object file
+db/db.cpp.o:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o
+.PHONY : db/db.cpp.o
+
+db/db.i: db/db.cpp.i
+
+.PHONY : db/db.i
+
+# target to preprocess a source file
+db/db.cpp.i:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.i
+.PHONY : db/db.cpp.i
+
+db/db.s: db/db.cpp.s
+
+.PHONY : db/db.s
+
+# target to generate assembly for a file
+db/db.cpp.s:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.s
+.PHONY : db/db.cpp.s
+
+db/usermodel.o: db/usermodel.cpp.o
+
+.PHONY : db/usermodel.o
+
+# target to build an object file
+db/usermodel.cpp.o:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o
+.PHONY : db/usermodel.cpp.o
+
+db/usermodel.i: db/usermodel.cpp.i
+
+.PHONY : db/usermodel.i
+
+# target to preprocess a source file
+db/usermodel.cpp.i:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.i
+.PHONY : db/usermodel.cpp.i
+
+db/usermodel.s: db/usermodel.cpp.s
+
+.PHONY : db/usermodel.s
+
+# target to generate assembly for a file
+db/usermodel.cpp.s:
+	cd /home/zxg/mycode/github/ChatServer/00Chat/build && $(MAKE) -f src/server/CMakeFiles/Chat_Server.dir/build.make src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.s
+.PHONY : db/usermodel.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -221,6 +275,12 @@ help:
 	@echo "... chatwork.o"
 	@echo "... chatwork.i"
 	@echo "... chatwork.s"
+	@echo "... db/db.o"
+	@echo "... db/db.i"
+	@echo "... db/db.s"
+	@echo "... db/usermodel.o"
+	@echo "... db/usermodel.i"
+	@echo "... db/usermodel.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

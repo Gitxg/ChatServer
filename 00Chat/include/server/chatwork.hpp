@@ -13,6 +13,9 @@ using namespace std;
 #include "json.hpp"
 using json = nlohmann::json;
 
+// 用户注册的数据库操作
+#include "usermodel.hpp"
+
 //表示处理消息的事件，回调方法类型
 using MsgHandler = std::function<void(const TcpConnectionPtr &conn, json &js, Timestamp)>;
 
@@ -38,6 +41,9 @@ private:
 
     //存储消息ID和其业务对应的处理方法
     unordered_map<int, MsgHandler> _msghandlermap;
+
+    // 数据操作类的对象
+    UserModel _usermodel;
 };
 
 #endif

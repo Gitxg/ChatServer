@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zxg/mycode/github/ChatServer/00Chat/include -I/home/zxg/mycode/github/ChatServer/00Chat/thridparty -I/home/zxg/mycode/github/ChatServer/00Chat/include/server 
+CXX_INCLUDES = -I/home/zxg/mycode/github/ChatServer/00Chat/include -I/home/zxg/mycode/github/ChatServer/00Chat/thridparty -I/home/zxg/mycode/github/ChatServer/00Chat/include/server -I/home/zxg/mycode/github/ChatServer/00Chat/include/server/db 
 

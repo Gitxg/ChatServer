@@ -4,13 +4,25 @@
 src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o
  ../include/server/chatserver.hpp
  ../include/server/chatwork.hpp
+ ../include/server/db/user.hpp
+ ../include/server/db/usermodel.hpp
  ../thridparty/json.hpp
  /home/zxg/mycode/github/ChatServer/00Chat/src/server/chatserver.cpp
 src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o
  ../include/public.hpp
  ../include/server/chatwork.hpp
+ ../include/server/db/user.hpp
+ ../include/server/db/usermodel.hpp
  ../thridparty/json.hpp
  /home/zxg/mycode/github/ChatServer/00Chat/src/server/chatwork.cpp
+src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o
+ ../include/server/db/db.hpp
+ /home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.cpp
+src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o
+ ../include/server/db/db.hpp
+ ../include/server/db/user.hpp
+ ../include/server/db/usermodel.hpp
+ /home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp
 src/server/CMakeFiles/Chat_Server.dir/main.cpp.o
  ../include/server/chatserver.hpp
  /home/zxg/mycode/github/ChatServer/00Chat/src/server/main.cpp
