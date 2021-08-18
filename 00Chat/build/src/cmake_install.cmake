@@ -1,4 +1,4 @@
-# Install script for directory: /home/zxg/mycode/github/ChatServer/00Chat/src
+# Install script for directory: /home/mi/mycode/github/ChatServer/00Chat/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,9 +32,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/cmake_install.cmake")
+  include("/home/mi/mycode/github/ChatServer/00Chat/build/src/server/cmake_install.cmake")
 
 endif()
 

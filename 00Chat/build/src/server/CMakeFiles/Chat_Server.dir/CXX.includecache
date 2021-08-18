@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -25,6 +25,10 @@ json.hpp
 ../include/server/json.hpp
 usermodel.hpp
 ../include/server/usermodel.hpp
+thread
+-
+mutex
+-
 
 ../include/server/db/db.hpp
 mysql/mysql.h
@@ -370,43 +374,47 @@ limits
 type_traits
 -
 
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatserver.cpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/chatserver.cpp
 chatserver.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatserver.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/chatserver.hpp
 chatwork.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatwork.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/chatwork.hpp
 functional
 -
 iostream
 -
 string
 -
+muduo/base/Logging.h
+-
 json.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/json.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/json.hpp
 
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatwork.cpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/chatwork.cpp
 chatwork.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatwork.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/chatwork.hpp
 public.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/public.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/public.hpp
 muduo/base/Logging.h
 -
 
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.cpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/db/db.cpp
 db.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
 muduo/base/Logging.h
 -
 
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp
 usermodel.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/db/usermodel.hpp
 db.hpp
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/db/db.hpp
+muduo/base/Logging.h
+-
 iostream
 -
 
-/home/zxg/mycode/github/ChatServer/00Chat/src/server/main.cpp
+/home/mi/mycode/github/ChatServer/00Chat/src/server/main.cpp
 iostream
 -
 chatserver.hpp

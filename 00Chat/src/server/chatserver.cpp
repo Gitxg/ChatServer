@@ -5,6 +5,9 @@
 #include <iostream>
 #include <string>
 
+#include <muduo/base/Logging.h>
+using namespace muduo;
+
 //引用json头文件
 #include "json.hpp"
 using json = nlohmann::json;
@@ -39,11 +42,14 @@ void ChatServer::onConnection(const TcpConnectionPtr &conn)
     if (conn->connected())
     {
         //客户端的IP地址 - > 服务端的的IP地址
-        cout << "连接成功 " << conn->peerAddress().toIpPort() << " - > " << conn->localAddress().toIpPort() << endl;
+        LOG_INFO << "连接成功 " << conn->peerAddress().toIpPort() << " - > " << conn->localAddress().toIpPort();
     }
     else
     {
-        cout << "连接失败 " << conn->peerAddress().toIpPort() << " - > " << conn->localAddress().toIpPort() << endl;
+        //退出的操作：输入：ctrl +] 然后 输入quit实现退出操作
+        LOG_INFO << "连接失败 " << conn->peerAddress().toIpPort() << " - > " << conn->localAddress().toIpPort();
+        //通过接口函数来实现客户端异常操作时的处理
+        ChatWork::instance()->clientCloseException(conn);
         conn->shutdown();
         //_loop->quit();
     }

@@ -1,10 +1,14 @@
 #include "usermodel.hpp"
 #include "db.hpp"
 
+#include <muduo/base/Logging.h>
+using namespace muduo;
+
 #include <iostream>
 using namespace std;
 
-bool UserModel::insert(User &user)
+// 插入数据操作
+bool UserModel::insert_user(User &user)
 {
     //1. 组装sql语句
     char str_ins[1024] = {0};
@@ -63,19 +67,75 @@ bool UserModel::logselect(User &user)
                     mysql_free_result(res);
                     return true;
                 }
-                /*
-                User user;
-                user.setId(atoi(row[0]));
-                user.setName(row[1]);
-                user.setPassword(row[2]);
-                user.setState(row[3]);
-                return user;
-                */
             }
         }
         //释放资源，保证内存不发生泄露
         mysql_free_result(res);
         return false;
+    }
+    // 否则是注册失败
+    return false;
+}
+
+// 查询数据操作
+User UserModel::select_user(int id)
+{
+    //1. 组装sql语句
+    char str_sel[1024] = {0};
+    // select count(*) from user where password = '123456' AND name = 'xiao ai'y
+    sprintf(str_sel, "select * from user where id = '%d'", id);
+
+    //2. 定义MYSQL对象
+    OrderSQL mysql1;
+    if (mysql1.connect())
+    {
+        //如果更新数据成功
+        MYSQL_RES *res = mysql1.query(str_sel);
+        //res不等于空指针代表查询成功
+        if (res != nullptr)
+        {
+            LOG_INFO << "查询成功";
+            //从返回值中查询行数
+            MYSQL_ROW row = mysql_fetch_row(res);
+            if (row != nullptr)
+            {
+                User user;
+                user.setId(atoi(row[0]));
+                user.setName(row[1]);
+                user.setPassword(row[2]);
+                user.setState(row[3]);
+                //释放资源，保证内存不发生泄露
+                mysql_free_result(res);
+                LOG_INFO << "返回成功";
+                return user;
+            }
+        }
+        //释放资源，保证内存不发生泄露
+        mysql_free_result(res);
+    }
+    // 否则是注册失败，直接返回id值为-1的User对象
+    return User();
+}
+
+// 更新数据操作
+bool UserModel::update_user(User &user)
+{
+    //1. 组装sql语句
+    char str_upd[1024] = {0};
+    // update user set state = 'online' where id = 22
+    sprintf(str_upd, "update user set state = '%s' where id = '%d'",
+            user.getState().c_str(),
+            user.getId());
+
+    //2. 定义MYSQL对象
+    OrderSQL mysql1;
+    if (mysql1.connect())
+    {
+        //如果更新数据成功
+        if (mysql1.update(str_upd))
+        {
+            return true;
+        }
     }
     // 否则是注册失败
     return false;

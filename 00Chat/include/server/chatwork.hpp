@@ -16,6 +16,10 @@ using json = nlohmann::json;
 // 用户注册的数据库操作
 #include "usermodel.hpp"
 
+//互斥量 实现锁定和解锁
+#include <thread>
+#include <mutex>
+
 //表示处理消息的事件，回调方法类型
 using MsgHandler = std::function<void(const TcpConnectionPtr &conn, json &js, Timestamp)>;
 
@@ -35,6 +39,9 @@ public:
     //获取消息对应的处理器
     MsgHandler getHandldr(int msgid);
 
+    //处理客户端的异常退出
+    void clientCloseException(const TcpConnectionPtr &conn);
+
 private:
     //构造函数私有化
     ChatWork();
@@ -44,6 +51,10 @@ private:
 
     // 数据操作类的对象
     UserModel _usermodel;
+
+    //存储在线用户的通信连接  (线程安全问题)
+    unordered_map<int, TcpConnectionPtr> _userConnMap;
+    std::mutex _gmut; //实例化互斥锁对象
 };
 
 #endif

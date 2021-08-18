@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatserver.cpp" "/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o"
-  "/home/zxg/mycode/github/ChatServer/00Chat/src/server/chatwork.cpp" "/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o"
-  "/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/db.cpp" "/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o"
-  "/home/zxg/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp" "/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o"
-  "/home/zxg/mycode/github/ChatServer/00Chat/src/server/main.cpp" "/home/zxg/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/main.cpp.o"
+  "/home/mi/mycode/github/ChatServer/00Chat/src/server/chatserver.cpp" "/home/mi/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/chatserver.cpp.o"
+  "/home/mi/mycode/github/ChatServer/00Chat/src/server/chatwork.cpp" "/home/mi/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/chatwork.cpp.o"
+  "/home/mi/mycode/github/ChatServer/00Chat/src/server/db/db.cpp" "/home/mi/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/db/db.cpp.o"
+  "/home/mi/mycode/github/ChatServer/00Chat/src/server/db/usermodel.cpp" "/home/mi/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/db/usermodel.cpp.o"
+  "/home/mi/mycode/github/ChatServer/00Chat/src/server/main.cpp" "/home/mi/mycode/github/ChatServer/00Chat/build/src/server/CMakeFiles/Chat_Server.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
