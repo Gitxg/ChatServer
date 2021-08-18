@@ -42,6 +42,9 @@ public:
     //处理客户端的异常退出
     void clientCloseException(const TcpConnectionPtr &conn);
 
+    //一对一聊天业务
+    void oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time);
+
 private:
     //构造函数私有化
     ChatWork();
@@ -52,7 +55,7 @@ private:
     // 数据操作类的对象
     UserModel _usermodel;
 
-    //存储在线用户的通信连接  (线程安全问题)
+    //存储当前在线用户的通信连接  (线程安全问题)
     unordered_map<int, TcpConnectionPtr> _userConnMap;
     std::mutex _gmut; //实例化互斥锁对象
 };

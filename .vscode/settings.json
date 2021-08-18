@@ -98,6 +98,13 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "string": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "iterator": "cpp",
+        "map": "cpp",
+        "memory_resource": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "set": "cpp",
+        "string_view": "cpp"
     }
 }

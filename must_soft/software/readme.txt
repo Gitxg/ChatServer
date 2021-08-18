@@ -1,0 +1,2 @@
+
+dpkg -i softname

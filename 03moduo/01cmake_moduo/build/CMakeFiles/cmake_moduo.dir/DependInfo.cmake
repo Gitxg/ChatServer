@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp" "/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o"
+  "/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp" "/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/cmake_moduo.dir/src/cmake_moduo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

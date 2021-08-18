@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp
+/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/src/cmake_moduo.cpp
 muduo/net/TcpServer.h
 -
 muduo/base/Logging.h

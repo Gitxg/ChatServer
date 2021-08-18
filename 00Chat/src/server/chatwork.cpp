@@ -16,6 +16,7 @@ ChatWork::ChatWork()
 {
     _msghandlermap.insert({LOGIN_MSG, std::bind(&ChatWork::login, this, _1, _2, _3)});
     _msghandlermap.insert({REG_MSG, std::bind(&ChatWork::reg, this, _1, _2, _3)});
+    _msghandlermap.insert({ONE_CHAT_MSG, std::bind(&ChatWork::oneChat, this, _1, _2, _3)});
 }
 
 //获取消息对应的处理器
@@ -40,7 +41,7 @@ MsgHandler ChatWork::getHandldr(int msgid)
 // ORM框架 对象关系映射(Object Relational Mapping)
 // 业务模块和数据模块拆分开
 
-// 处理登录业务
+// 处理登录业务        {"msgid":1,"id":24,"password":"123456"}
 // 返回bool类型的登录  {"msgid":1,"name":"xiao ai","password":"123456"}
 // 返回user类型的登录  {"msgid":1,"id":22,"password":"123456"}
 void ChatWork::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
@@ -121,8 +122,8 @@ void ChatWork::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
 // 处理注册业务
 void ChatWork::reg(const TcpConnectionPtr &conn, json &js, Timestamp time)
 {
+    // {"msgid":3,"name":"li2","password":"123456"}
     // 接收到的 js 信息为：
-    // {"msgid":3,"name":"xiao ai","password":"123456"}
     LOG_INFO << "开始处理注册业务";
 
     string jsname = js["name"];
@@ -185,5 +186,36 @@ void ChatWork::clientCloseException(const TcpConnectionPtr &conn)
         //更新用户状态信息为 offline
         user.setState("offline");
         this->_usermodel.update_user(user);
+    }
+}
+
+// 一对一的业务聊天
+// 首先需要判断 toid 是否在线 在线：直接转发，离线：放在表中。
+void ChatWork::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time)
+{
+    // {"msgid":5,"fromid":22,"fromname":"xiao ai","toid":24,"toname":"xxxxxxxxxx","msg":"123456"}
+    // {"msgid":5,"fromid":24,"toid":22,"msg":"666666"}
+    LOG_INFO << "开始处理一对一聊天业务";
+    int from_id = js["fromid"];
+    //  string from_name = js["fromname"];
+    int to_id = js["toid"];
+    //  string to_name = js["toname"];
+    string msg = js["msg"];
+
+    {
+        //保证发的时候conn不被移除
+        lock_guard<mutex> _guard(_gmut);
+        auto it = _userConnMap.find(to_id);
+        if (it != _userConnMap.end())
+        {
+            //在线转发消息:A发给服务器的消息直接转发给B
+            //服务器推送消息给B
+            TcpConnectionPtr to_conn = it->second;
+            to_conn->send(js.dump());
+            return;
+        }
+        else
+        { //离线发送消息
+        }
     }
 }

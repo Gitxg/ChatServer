@@ -1,3 +1,3 @@
-/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/edit_cache.dir
-/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/rebuild_cache.dir
-/home/zxg/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/cmake_moduo.dir
+/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/rebuild_cache.dir
+/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/cmake_moduo.dir
+/home/mi/mycode/github/ChatServer/03moduo/01cmake_moduo/build/CMakeFiles/edit_cache.dir
