@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <vector>
 int main(void)
 
 {
+    vector<int> sss;
+    sss.push_back(1);
     char buffer[200], s[] = "computer", c = 'l';
     int i = 35, j;
     float fp = 1.7320534f;
