@@ -54,6 +54,7 @@ private:
 
     // 数据操作类的对象
     UserModel _usermodel;
+    OfflineMsgModle _offlinemsgmodle;
 
     //存储当前在线用户的通信连接  (线程安全问题)
     unordered_map<int, TcpConnectionPtr> _userConnMap;

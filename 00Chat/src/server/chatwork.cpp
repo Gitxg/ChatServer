@@ -1,6 +1,7 @@
 #include "chatwork.hpp"
 #include "public.hpp"
 
+#include "offlinemsgmodel.hpp"
 #include <muduo/base/Logging.h>
 using namespace muduo;
 
@@ -66,6 +67,13 @@ void ChatWork::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
         }
         else
         {
+
+            { //作用域：在大括号里面定义该对象，出去括号自动析构并解锁
+                //加锁来保证线程安全
+                lock_guard<mutex> _guard(_gmut);
+                //存储记录当前在线用户的通信连接信息
+                _userConnMap.insert({id, conn});
+            }
             //更新用户状态信息
             user.setState("online");
             this->_usermodel.update_user(user);
@@ -75,14 +83,23 @@ void ChatWork::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
             response["msgid"] = LOGIN_MSG_ACK;
             //表示登录响应成功
             response["reeno"] = 0;
-            conn->send(response.dump());
 
-            { //作用域：在大括号里面定义该对象，出去括号自动析构并解锁
-                //加锁来保证线程安全
-                lock_guard<mutex> _guard(_gmut);
-                //存储记录当前在线用户的通信连接信息
-                _userConnMap.insert({id, conn});
+            //查询用户是否有离线信息
+            //离线信息存到vector中
+            vector<string> usermsg;
+            //通过用户的id值来查询所有的离线信息
+            usermsg = _offlinemsgmodle.query(user.getId());
+            //离线信息不为空的话
+            if (!usermsg.empty())
+            {
+                for (auto itmsg = usermsg.begin(); itmsg != usermsg.end(); itmsg++)
+                {
+                    //讲字符串转为json对象
+                    response = json::parse(*itmsg);
+                }
             }
+
+            conn->send(response.dump());
         }
     }
     else
@@ -206,6 +223,7 @@ void ChatWork::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time)
         //保证发的时候conn不被移除
         lock_guard<mutex> _guard(_gmut);
         auto it = _userConnMap.find(to_id);
+        //服务器的连接表中没有存在，表示对方已经下线
         if (it != _userConnMap.end())
         {
             //在线转发消息:A发给服务器的消息直接转发给B
@@ -215,7 +233,9 @@ void ChatWork::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time)
             return;
         }
         else
-        { //离线发送消息
+        { //离线发送消息:讲发送给id的消息存到表中
+            _offlinemsgmodle.insert(to_id);
+            return;
         }
     }
 }
